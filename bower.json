@@ -1,0 +1,26 @@
+{
+  "name": "blog-angular",
+  "version": "0.0.0",
+  "authors": [
+    "Lazhari Mohammed <lazhari.mohammed@outlook.com>"
+  ],
+  "description": "Blog with Angular",
+  "keywords": [
+    "blog",
+    "angularjs"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.3",
+    "foundation": "~5.5.2",
+    "angular-route": "~1.4.3"
+  }
+}

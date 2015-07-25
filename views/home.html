@@ -1,0 +1,61 @@
+<div class="row">
+
+    <div class="large-4 small-12 columns">
+        <img src="{{article.logo}}" height="500px" width="500px">
+        <div class="hide-for-small panel">
+            <h3>{{article.title}}</h3>
+            <h5 class="subheader">
+                {{article.content}}
+            </h5>
+        </div><a href="#">
+        <div class="panel callout radius">
+            <h6>99&nbsp; items in your cart</h6>
+        </div></a>
+    </div>
+
+    <div class="large-7 columns">
+        <div class="row">
+            <div class="columns large-12 large-centered">
+                <form action="" class="">
+                    <div class="row">
+                        <div class="large-6">
+                            <label>Search</label>
+                        </div>
+                        <div class="large-6">
+                            <input type="text" placeholder="search" ng-model="nameSearch"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="row" ng-if="!articles.length">
+                <br/>
+                <div class="columns large-8 small-8 small-centered large-centered">
+                    <div data-alert class="alert-box warning text-center">
+                        <strong>
+                            No articles Founded !
+                        </strong>
+                        <a href="#" class="close">&times;</a>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <div class="row">
+                <div class="large-12">
+                    <div class="row">
+                        <div class="large-12 small-12 columns" ng-repeat="article in articles| filter: {content: nameSearch}">
+                            <div class="panel">
+                                <h2 class="text-center">{{article.title}}</h2>
+                                <h6 class="subheader">
+                                    {{article.content}}
+                                </h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
